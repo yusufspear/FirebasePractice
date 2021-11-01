@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_firstname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="9"
+        android:hint="new Name"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_age2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_firstname"
+        app:layout_constraintTop_toTopOf="@+id/et_firstname"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/et_age2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="new Age"
+        android:inputType="number"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_salary2"
+        app:layout_constraintStart_toStartOf="@+id/et_firstname2"
+        app:layout_constraintTop_toBottomOf="@+id/et_firstname2" />
+
+    <EditText
+        android:id="@+id/et_salary2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="new Salary"
+        android:inputType="number"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_salary"
+        app:layout_constraintStart_toStartOf="@+id/et_age2"
+        app:layout_constraintTop_toBottomOf="@+id/et_age2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Upload"
+        app:layout_constraintBottom_toTopOf="@+id/btn_download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downloaded"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delete"
+        app:layout_constraintEnd_toEndOf="@+id/btn_upload"
+        app:layout_constraintStart_toStartOf="@+id/btn_upload"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/btn_delete"
+        app:layout_constraintStart_toStartOf="@+id/btn_delete"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Delete"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="@+id/btn_download"
+        app:layout_constraintStart_toStartOf="@+id/btn_download"
+        app:layout_constraintTop_toBottomOf="@+id/btn_download" />
+
+    <EditText
+        android:id="@+id/et_firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:ems="9"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="Age"
+        android:inputType="number"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_salary"
+        app:layout_constraintEnd_toEndOf="@+id/et_firstname"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_firstname"
+        app:layout_constraintTop_toBottomOf="@+id/et_firstname" />
+
+    <EditText
+        android:id="@+id/et_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:ems="9"
+        android:hint="Salary"
+        android:inputType="number"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_age"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_age"
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    <Button
+        android:id="@+id/btn_savetofirestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Write"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_salary" />
+
+
+    <Button
+        android:id="@+id/btn_updatetofirestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_savetofirestore" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+    <Button
+        android:id="@+id/btn_readfromfirestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_savetofirestore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/btn_savetofirestore" />
+
+    <TextView
+        android:id="@+id/tv_showData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/btn_readfromfirestore"
+        app:layout_constraintStart_toEndOf="@+id/btn_savetofirestore"
+        app:layout_constraintTop_toBottomOf="@+id/btn_savetofirestore" />
+
+    <Button
+        android:id="@+id/btn_deletefromfirestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/btn_readfromfirestore" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
